@@ -1,16 +1,20 @@
-fetch('https://www.reddit.com/search.json?limit=100&q=calvinandhobbes')
+fetch('https://www.reddit.com/search.json?limit=100&after=t3_5p8gyr&q=calvinandhobbes')
   .then(function(res) {
     return res.json()
   })
   .then(function(res) {
-    var randomChild = Math.floor(Math.random() * 100);
     console.log(res.data.children.length);
-    console.log(res.data.children[randomChild]);
-    // document.addEventListener('DOMContentLoaded', function() {
-      var comicImage = document.getElementById('comicImg');
+    var comicImage = document.getElementById('comicImg');
+    var imgArr = [];
 
-      comicImage.src = res.data.children[randomChild].data.url
-    // })
+    for(var i=0;i<res.data.children.length;i++) {
+      if(res.data.children[i].data.author === "CalvinBot") {
+        imgArr.push(res.data.children[i].data.url);
+      }
+    }
+    console.log("img: " + imgArr.length);
+
+    comicImage.src = imgArr[0];
   })
 //
 //
