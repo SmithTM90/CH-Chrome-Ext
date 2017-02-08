@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Calvin and Hobbes Extension",
+  "description": "This extension will eventually display a C&H comic when a new tab is opened",
+  "version": "0.1",
+  "chrome_url_overrides" : {
+    "newtab": "NewTab.html"
+  },
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "C&H Comics"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
