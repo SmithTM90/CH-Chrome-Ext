@@ -14,7 +14,7 @@ fetch('https://www.reddit.com/search.json?limit=100&q=calvinandhobbes&sort=new&t
     }
     console.log("img: " + imgArr.length);
 
-    comicImage.src = imgArr[3];
+    comicImage.src = imgArr[0];
   })
 
 // fetch('https://reddit.com/user/CalvinBot/overview.json')
