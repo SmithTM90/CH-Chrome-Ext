@@ -7,13 +7,23 @@ h1 {
   font-family: 'Barrio', cursive;
 }
 
-img {
+button {
+  width: 65px;
+  border: none;
+}
+
+#comicImg {
+  margin-top: 10px;
   border: 2px solid #292929;
   width: 100%;
-  max-height: 660px;
+  max-height: 675px;
 }
 
 #main {
   width: 95%;
   margin: 0 auto;
+}
+
+.googleApps {
+  text-align: center;
 }
