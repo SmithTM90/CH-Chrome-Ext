@@ -1,15 +1,11 @@
-fetch('https://www.reddit.com/search.json?limit=100&q=calvinandhobbes&sort=new&type=t3_')
+fetch('https://www.reddit.com/search.json?q=author:CalvinBot&sort=new')
   .then(function(res) {
     return res.json()
   })
   .then(function(res) {
     var comicImage = document.getElementById('comicImg');
     var imgArr = [];
-
-    for(var i=0;i<100;i++) {
-      if(res.data.children[i].data.author === "CalvinBot") {
-        imgArr.push(res.data.children[i].data.url);
-      }
-    }
+    var CHImage = res.data.children[0].data.url
+    imgArr.push(CHImage);
     comicImage.src = imgArr[0];
   })
